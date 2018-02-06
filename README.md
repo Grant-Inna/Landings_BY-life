@@ -2,7 +2,7 @@
 Repository for testing and demonstrating landings
 
 
-[**Adult**](https://grant-inna.github.io/Landings_TJ/Adult/) *in process*
+[**Adult**](https://grant-inna.github.io/Landings_TJ/Adult/) *ready*
 
 [**Video**](https://grant-inna.github.io/Landings_TJ/Video/) *coming soon*
 
@@ -22,7 +22,7 @@ Repository for testing and demonstrating landings
 
 [**Sport**](https://grant-inna.github.io/Landings_TJ/Sport/) *coming soon*
 
-[**Weather**](https://grant-inna.github.io/Landings_TJ/Weather/) *coming soon*
+[**Weather**](https://grant-inna.github.io/Landings_TJ/Weather/) *ready*
 
 
 ---
