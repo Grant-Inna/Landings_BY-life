@@ -1,0 +1,101 @@
+@back-body-color: rgb(238, 238, 238);
+@back-body-image: url('../images/bg.png');
+@back-body-position: top;
+@back-body: @back-body-image @back-body-position no-repeat;
+@back-size-body: 100% auto;
+.wrapper {
+  background: @back-body-color @back-body;
+  background-size: @back-size-body;
+
+  //.landscape( background-position, center 94%);
+}
+
+/* header */
+@back-header-image:url('../images/back-header.png');
+@back-header-position: center;
+@back-header: @back-header-image @back-header-position no-repeat;
+@back-size-header: 100% 100%;
+
+.header {
+  background: @back-header;
+  background-size: @back-size-header;
+
+  .flex;
+  .justify-between;
+  .items-center;
+}
+
+
+@back-header-logo-image: url('../images/logo.png');
+@back-header-logo-position: bottom left;
+@back-header-logo: @back-header-logo-image @back-header-logo-position no-repeat;
+@back-size-header-logo: contain;
+
+@width-header-logo: 60%;
+@height-header-logo: 60%;
+
+@margin-header-logo: 4%;
+
+.header__logo {
+  background: @back-header-logo;
+  background-size: @back-size-header-logo;
+
+  width: @width-header-logo;
+  height: @height-header-logo;
+
+  margin-left: @margin-header-logo;
+}
+
+@back-header-elements-image: url('../images/header-elems.png');
+@back-header-elements-position: right;
+@back-header-elements: @back-header-elements-image @back-header-elements-position no-repeat;
+@back-size-header-element: contain;
+
+@width-header-elements: 80% - @width-header-logo;
+@height-header-elements: 45%;
+
+@margin-header-elements: 4%;
+
+.header__elements {
+  background: @back-header-elements;
+  background-size: @back-size-header-element;
+
+  width: @width-header-elements;
+  height: @height-header-elements;
+
+  margin-right: @margin-header-elements;
+}
+
+
+.header__info {
+  @back-header-info-image: @back-body-color;
+  @color-header-info: rgb(61, 63, 65);
+  @back-header-info-position: center;
+  @back-header-info: @back-header-info-image @back-header-info-position no-repeat;
+  @back-size-header-info: 100% 100%;
+  @box-shadow-header-info: none;
+  @border-header-info: none;
+
+  background: @back-header-info;
+  background-size: @back-size-header-info;
+
+  color: @color-header-info;
+
+  box-shadow: @box-shadow-header-info;
+  border-bottom: @border-header-info;
+}
+
+
+/* dop top */
+
+/*.header__dopTop {
+  width: 100%;
+  margin: 0 auto;
+  background: transparent url('../images/dop-top.png') center no-repeat;
+  background-size: contain;
+  height:0;
+  //.xs-o( @p,height, 30px);
+  .xxs-h( @sm, @p, { height: 50px });
+  .sm-h( @md, @p, { height: 60px });
+  .landscape-h( 820px, height, 75px)
+}*/
