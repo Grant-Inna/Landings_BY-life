@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
     smartGrid = require('smart-grid'),
     less = require('gulp-less'),
+    jade = require('gulp-jade'),
     groupMedia = require('gulp-group-css-media-queries'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
@@ -89,8 +90,43 @@ gulp.task('CSS6', function() {
         .pipe(cleanCSS())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest( '6/css/' ))
-        .pipe(notify('CSS6 Success!'));
+        .pipe(notify('CSS5 Success!'));
 });
+
+
+gulp.task('jade_1', function() {
+    return gulp.src( '1/dev/index.jade' )
+        .pipe( jade() )
+        .pipe( gulp.dest( '1/' ))
+});
+gulp.task('jade_2', function() {
+    return gulp.src( '2/dev/index.jade' )
+        .pipe( jade() )
+        .pipe( gulp.dest( '2/' ))
+});
+gulp.task('jade_3', function() {
+    return gulp.src( '3/dev/index.jade' )
+        .pipe( jade() )
+        .pipe( gulp.dest( '3/' ))
+});
+gulp.task('jade_4', function() {
+    return gulp.src( '4/dev/index.jade' )
+        .pipe( jade() )
+        .pipe( gulp.dest( '4/' ))
+});
+gulp.task('jade_5', function() {
+    return gulp.src( '5/dev/index.jade' )
+        .pipe( jade() )
+        .pipe( gulp.dest( '5/' ))
+});
+gulp.task('jade_6', function() {
+    return gulp.src( '6/dev/index.jade' )
+        .pipe( jade() )
+        .pipe( gulp.dest( '6/' ))
+});
+
+
+
 
 
 
@@ -142,12 +178,15 @@ gulp.task( 'watch__all', function() {
 });
 
 var all = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6' ];
-var allSRC = './**/dev/less/style.less';
+var allSRC = './**/dev/less/*.less';
 var allW = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'watch__common' ];
 var allSrcTask = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'watch__all' ];
 
+var jadeTask = [ 'jade_1', 'jade_2', 'jade_3', 'jade_4', 'jade_5', 'jade_6' ];
+
 gulp.task( 'default1', allW );
 gulp.task( 'default', allSrcTask );
+gulp.task( 'jade', jadeTask );
 
 
 

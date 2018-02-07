@@ -917,6 +917,10 @@ a {
   outline: none;
 }
 
+.button__buy {
+  text-transform: uppercase;
+}
+
 .button__text {
   margin-left: auto;
 }
