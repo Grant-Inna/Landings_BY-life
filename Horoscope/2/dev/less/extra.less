@@ -1,0 +1,106 @@
+/* dop top */
+
+.header__dopTop {
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(241, 243, 245, 7) url('../images/dop-top.png') center no-repeat;
+  background-size: 90%;
+  height: 0;
+  margin-top: 3px;
+  .xs-o( @p, height, 60px);
+  .xxs-h( @sm, @p, { height: 70px });
+  .sm-h( @md, @p, { height: 80px });
+  .landscape-h( 710px, height, 100px)
+}
+
+/* top extra block */
+
+
+@back-header-extra-image: url('../images/header-extra.png');
+@back-header-extra-position: center;
+@back-header-extra: @back-header-extra-image @back-header-extra-position no-repeat;
+@back-size-header-extra: 100% 100%;
+@height-header-extra: 50px;
+@margin-top-header-extra: 20px;
+@border-r-header-extra: 3px;
+@margin-bottom-header-extra: -25%;
+@box-shadow-header-extra: none;
+
+.header__extra {
+  position: relative;
+  display: none;
+
+  width: 96%;
+  min-height: @height-header-extra;
+  border-radius: @border-r-header-extra;
+
+  margin: @margin-top-header-extra auto @margin-bottom-header-extra;
+
+  background: @back-header-extra;
+  background-size: @back-size-header-extra;
+  box-shadow: @box-shadow-header-extra;
+
+  .xxs-h(@sm, @p, { // iPhone 6
+    margin-top: 8px;
+    margin-bottom: -20%;
+    width: 90%;
+  });
+  .xxs-h(@lg, @p, { // iPhone X
+    margin-top: 35px;
+    width: 94%;
+  });
+  .sm-h(@md, @l, { // На компьютере
+    display: block;
+    width: 70%;
+    margin-top: 20px;
+  });
+  .lg-h( 715px, @l, {
+    display: block;
+    width: 60%;
+  margin-bottom: -17%;
+  });
+}
+
+.relation {
+  height: 0;
+  padding-top: 25%;
+
+  .xxs( padding-top, 30% )
+}
+
+@back-header-relation-image: url('../images/first-screen.png');
+@back-header-relation-position: center;
+@back-header-relation: @back-header-relation-image @back-header-relation-position no-repeat;
+@back-size-header-relation: 75% auto;
+
+.relation__content {
+  .full-size;
+  position: absolute;
+  top: 0; left: 0;
+
+  background: @back-header-relation;
+  background-size: @back-size-header-relation;
+
+  .xsm( background-size, 85% auto )
+
+}
+
+
+
+
+.checked {
+  background: url('../images/second-screen.png') center no-repeat;
+  background-size: 90% auto;
+  animation: back .6s;
+}
+
+@keyframes back {
+  0% {
+    transform: scale(.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
