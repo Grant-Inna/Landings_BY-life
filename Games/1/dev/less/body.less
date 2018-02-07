@@ -1,0 +1,101 @@
+@back-body-color: rgb(69, 34, 131);
+@back-body-image: url('../images/bg.png');
+@back-body-position: bottom;
+@back-body: @back-body-image @back-body-position no-repeat;
+@back-size-body: cover;
+.wrapper {
+  background: @back-body-color @back-body;
+  background-size: @back-size-body;
+
+  .landscape( background-size, cover );
+}
+
+/* header */
+@back-header-image: rgb(69, 34, 131);
+@back-header-position: center;
+@back-header: @back-header-image @back-header-position no-repeat;
+@back-size-header: 100% 100%;
+
+.header {
+  background: @back-header;
+  background-size: @back-size-header;
+
+  .flex;
+  .justify-between;
+  .items-center;
+}
+
+
+@back-header-logo-image: url('../images/logo.png');
+@back-header-logo-position: bottom left;
+@back-header-logo: @back-header-logo-image @back-header-logo-position no-repeat;
+@back-size-header-logo: contain;
+
+@width-header-logo: 60%;
+@height-header-logo: 80%;
+
+@margin-header-logo: 4%;
+
+.header__logo {
+  background: @back-header-logo;
+  background-size: @back-size-header-logo;
+
+  width: @width-header-logo;
+  height: @height-header-logo;
+
+  margin-left: @margin-header-logo;
+}
+
+@back-header-elements-image: url('../images/header-elems.png');
+@back-header-elements-position: right;
+@back-header-elements: @back-header-elements-image @back-header-elements-position no-repeat;
+@back-size-header-element: contain;
+
+@width-header-elements: 80% - @width-header-logo;
+@height-header-elements: 55%;
+
+@margin-header-elements: 4%;
+
+.header__elements {
+  background: @back-header-elements;
+  background-size: @back-size-header-element;
+
+  width: @width-header-elements;
+  height: @height-header-elements;
+
+  margin-right: @margin-header-elements;
+}
+
+
+.header__info {
+  @back-header-info-image: @back-body-color;
+  @color-header-info: rgb(213, 213, 213);
+  @back-header-info-position: center;
+  @back-header-info: @back-header-info-image @back-header-info-position no-repeat;
+  @back-size-header-info: 100% 100%;
+  @box-shadow-header-info: inset 0 10px 9px 0px rgba(0,0,0,0);
+  @border-header-info: none;
+
+  background: @back-header-info;
+  background-size: @back-size-header-info;
+
+  color: @color-header-info;
+
+  box-shadow: @box-shadow-header-info;
+  border-bottom: @border-header-info;
+}
+
+
+/* dop top */
+
+.header__dopTop {
+  width: 80%;
+  margin: 0 auto;
+  background: @back-body-color url('../images/dop-top.png') center no-repeat;
+  background-size: 90%;
+  height: 2px;
+  .xs-o( @p, width, 70%);
+  .xxs-h( @sm, @p, { height: 3px });
+  .sm-h( @md, @p, { height: 4px });
+  .landscape-h( 710px, height, 4px)
+}
