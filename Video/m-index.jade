@@ -1,0 +1,45 @@
+mixin index( buttonText, dopTop, icon )
+    .wrapper
+        .header__container
+            .header
+                .header__logo
+                .header__elements
+            case dopTop
+                when 'Top'
+                    .header__dopTop
+                    .header__extra
+                        .relation
+                        #infoScreen.relation__content
+                when 'noTop'
+                    .header__extra
+                        .relation
+                        #infoScreen.relation__content
+        .wrapper__form
+            include text-check
+            .button__container
+                #firstScreen.button__check
+                    label.check__label
+                        input#mainCheckbox.check__input( type="checkbox" )
+                        .check__checked
+                    .check__container
+                        label.check__big( for="mainCheckbox" ) ПОДТВЕРЖДАЮ
+                        a.check__link( href="http://vplayer.ru/uploads/documents/tj-mlt.pdf", target="_blank" )
+                            div своё согласие на подписку
+                button#submitButton.button__buy( onclick="document.getElementById('frm-btn').submit(); return false;" )
+                    case icon
+                        when 'icon'
+                            span.button__text #{ buttonText }
+                            span.button__icon
+                        when 'no-icon'
+                            span #{ buttonText }
+            button.button__cancel( onclick="document.getElementById('frm-cancel').submit(); return false;" ) Отмена
+        .footer Нажатием кнопки "#{ buttonText }" Вы осуществляете подписку на доступ к интернет-ресурсу &nbsp;
+            a( href="http://vplayer.ru" ) vplayer.ru
+            | и подтверждаете, что ознакомлены и согласны с &nbsp;
+            a( href="http://vplayer.ru/uploads/documents/tj-mlt.pdf", target="_blank" ) условиями подписки.
+            | Стоимость подписки: 0,3 TJS. с НДС за 1 день для абонентов МегаФон Таджикистан.
+            br
+            | Чтобы остановить подписку, отправьте SMS с текстом СТОП 1006 на номер 2420
+    script document.getElementById('mainCheckbox').addEventListener('click', function () { document.getElementById('firstScreen').classList.add('fadeOut'); document.getElementById('submitButton').classList.add('fadeIn'); document.getElementById('checked__textContainer').classList.add('fadeIn'); document.getElementById('infoScreen').classList.add( 'checked' )}); document.getElementById('secondCheckbox').addEventListener('click', function () { if(!document.getElementById('secondCheckbox').checked){ document.getElementById('submitButton').setAttribute( 'disabled', 'disabled' )}else{ document.getElementById('submitButton').removeAttribute( 'disabled', 'disabled' )} });
+
+
