@@ -884,25 +884,43 @@ a {
   outline: none;
 }
 
-.button__buy, .button__check {
-  position: absolute;
-  .full-size;
-  top: 0;
-  left: 0;
-  background: inherit;
+.button__buy {
   border: none;
+  .flex-center;
+  height: 60px;
+  min-height: 40px;
+  max-height: 90px;
+  width: 250px;
+  min-width: 200px;
+  max-width: 380px;
+  .xxs-b({
+    width: 75vw;
+    height: 30vh;
+  });
+  margin: 70px auto 5px;
+
+  .from-to-h-o( 300px, 350px, @l, {
+    margin-top: 0;
+  });
+  .from-to-h-o( 351px, 420px, @l, {
+    margin-top: 30px;
+  });
+
+  font-size: 3rem;
+  font-weight: 600;
+
+  transition: .05s ease-in-out;
   outline: none;
+
 }
 
 .button__text {
-  margin-left: auto;
-  .xxs-o( @p, margin-left, 0 );
-  .sm-o( @l, margin-left, 0 );}
+  text-transform: uppercase;
+}
 
 .button__icon {
-  margin-right: auto;
-  .xxs-o( @p, margin-right, 0 );
-  .sm-o( @l, margin-right, 0 );}
+  margin-left: 15px;
+}
 
 #submitButton:disabled {
   background: rgb(110, 110, 110);
@@ -948,13 +966,13 @@ a {
   padding: 3px 4px 5px;
   text-align: center;
   width: 100%;
-  height: 70px;
+  height: 80px;
 
 
   .xxs( height, auto );
 
-  .landscape( height, 58px );
-  .landscape-h( @md, height, 55px );
-  .landscape-h( @lg, height, 60px );
+  .landscape( height, 70px );
+  .landscape-h( @md, height, 67px );
+  .landscape-h( @lg, height, 63px );
 }
 

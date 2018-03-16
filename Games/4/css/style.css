@@ -905,24 +905,38 @@ a {
   outline: none;
 }
 
-.button__buy,
-.button__check {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: inherit;
+.button__buy {
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 60px;
+  min-height: 40px;
+  max-height: 90px;
+  width: 250px;
+  min-width: 200px;
+  max-width: 380px;
+  margin: 70px auto 5px;
+  font-size: 3rem;
+  font-weight: 600;
+  -webkit-transition: 0.05s ease-in-out;
+  -o-transition: 0.05s ease-in-out;
+  transition: 0.05s ease-in-out;
   outline: none;
 }
 
 .button__text {
-  margin-left: auto;
+  text-transform: uppercase;
 }
 
 .button__icon {
-  margin-right: auto;
+  margin-left: 15px;
 }
 
 #submitButton:disabled {
@@ -975,7 +989,7 @@ a {
   padding: 3px 4px 5px;
   text-align: center;
   width: 100%;
-  height: 70px;
+  height: 80px;
 }
 
 .wrapper {
@@ -1099,29 +1113,6 @@ a {
   }
 }
 
-.checked__textContainer {
-  color: #a7a7a7;
-  background: #000f17;
-}
-
-.checked__label {
-  background: url('../images/back-small-box.png') center no-repeat;
-  background-size: 100% 100%;
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  margin-right: 7px;
-}
-
-.checked__input {
-  position: absolute;
-  opacity: 0;
-}
-
-.checked__text {
-  font-size: 1.5rem;
-}
-
 /* button */
 
 .button__container {
@@ -1132,25 +1123,6 @@ a {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-
-/* first screen */
-
-.button__check {
-  z-index: 10;
-  border: none;
-  /*box-sizing: border-box;
-  border-bottom: @border-button-check;
-  padding-bottom: @border-size-button-container;*/
-  border-radius: 50px;
-  color: #000;
-}
-
-.check__label {
-  background: url("../images/big-box.png");
-  background-size: 100% 100%;
-}
-
-/* second screen */
 
 .button__buy {
   display: -webkit-box;
@@ -1165,8 +1137,12 @@ a {
   font-size: 3.1rem;
   color: #000;
   text-transform: uppercase;
+  background: #fcc92e;
+  background-size: 100% 100%;
+  border-bottom: 0 solid transparent;
   border-radius: 50px;
-  opacity: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /*@back-button-icon-image: url('../images/button-icon.png');
@@ -1203,244 +1179,6 @@ a {
   color: #dbdbdb;
 }
 
-/* index */
-
-/* first screen */
-
-.button__check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: 0.05s ease-in-out;
-  -o-transition: 0.05s ease-in-out;
-  transition: 0.05s ease-in-out;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-}
-
-.check__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-line-pack: end;
-      align-content: end;
-  height: 5rem;
-}
-
-.check__container .check__big {
-  font-size: 3.1rem;
-  font-weight: 600;
-  font-variant: all-small-caps;
-}
-
-.check__container .check__link {
-  font-size: 1.4rem;
-  font-weight: 400;
-  text-decoration: none;
-  border-bottom: 1px solid #000;
-}
-
-.check__container .check__link div {
-  margin-bottom: 1px;
-  width: 100%;
-  text-align: center;
-}
-
-.check__label {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
-  margin-right: 10px;
-  margin-left: auto;
-}
-
-.check__input {
-  opacity: 0;
-}
-
-.check__checked {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.check__checked:after {
-  content: '\2713';
-  color: black;
-  font-size: 4rem;
-  margin: 0 auto;
-}
-
-.check__label > .check__checked:after {
-  color: #000;
-}
-
-.check__container {
-  margin-right: auto;
-}
-
-#mainCheckbox:checked + .check__checked {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#secondCheckbox:checked + .checked__checked {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-/* second screen */
-
-.checked__textContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  opacity: 0;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-}
-
-.checked__checked {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.checked__checked:after {
-  content: '\2713';
-  color: black;
-  font-size: 4rem;
-  margin: 0 auto;
-}
-
-.checked__checked:after {
-  font-size: 1.6rem;
-}
-
-.checked__text a {
-  text-decoration: none;
-}
-
-/* animation */
-
-.fadeOut {
-  -webkit-animation: out .5s;
-          animation: out .5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes out {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 0;
-  }
-}
-
-@keyframes out {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 0;
-  }
-}
-
-.fadeIn {
-  -webkit-animation: in .6s;
-          animation: in .6s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes in {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 0;
-  }
-
-  40% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-    opacity: .9;
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes in {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 0;
-  }
-
-  40% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-    opacity: .9;
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-
 @media screen and (min-width: 310px) and (min-height: 410px) and (orientation: portrait) {
   .header__extra {
     display: block;
@@ -1457,16 +1195,17 @@ a {
     height: 65%;
   }
 
+  .button__buy {
+    width: 75vw;
+    height: 30vh;
+  }
+
   .footer {
     height: auto;
   }
 
   .relation {
     padding-top: 30%;
-  }
-
-  .checked__text {
-    font-size: 1.6rem;
   }
 }
 
@@ -1506,22 +1245,6 @@ a {
   html {
     font-size: 10px;
   }
-
-  .button__text {
-    margin-left: 0;
-  }
-
-  .button__icon {
-    margin-right: 0;
-  }
-
-  .check__label {
-    margin-left: 0;
-  }
-
-  .check__container {
-    margin-right: 0;
-  }
 }
 
 @media screen and (min-width: 410px) and (orientation: portrait) {
@@ -1559,22 +1282,6 @@ a {
 @media screen and (min-width: 660px) and (orientation: landscape) {
   html {
     font-size: 10px;
-  }
-
-  .button__text {
-    margin-left: 0;
-  }
-
-  .button__icon {
-    margin-right: 0;
-  }
-
-  .check__label {
-    margin-left: 0;
-  }
-
-  .check__container {
-    margin-right: 0;
   }
 }
 
@@ -1669,7 +1376,7 @@ a {
   }
 
   .footer {
-    height: 58px;
+    height: 70px;
   }
 
   .wrapper {
@@ -1717,7 +1424,7 @@ a {
   }
 
   .footer {
-    height: 60px;
+    height: 63px;
   }
 }
 
@@ -1736,6 +1443,18 @@ a {
   }
 }
 
+@media screen and (min-height: 300px) and (max-height: 350px) and (orientation: landscape) {
+  .button__buy {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-height: 351px) and (max-height: 420px) and (orientation: landscape) {
+  .button__buy {
+    margin-top: 30px;
+  }
+}
+
 @media screen and (min-height: 660px) and (orientation: landscape) {
   .button__cancel {
     margin: 100px auto 0;
@@ -1745,7 +1464,7 @@ a {
 
 @media screen and (min-height: 730px) and (orientation: landscape) {
   .footer {
-    height: 55px;
+    height: 67px;
   }
 }
 
