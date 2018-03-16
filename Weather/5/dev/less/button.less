@@ -1,37 +1,4 @@
 
-.checked__textContainer {
-  color: rgb(116, 116, 116);
-
-  background: @back-body-color;
-}
-
-@back-small-box-image: url('../images/back-small-box.png');
-@back-small-box-position: center;
-@back-small-box: @back-small-box-image @back-small-box-position no-repeat;
-@back-size-small-box: 100% 100%;
-.checked__label {
-  background: @back-small-box;
-  background-size: @back-size-small-box;
-
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  margin-right: 7px;
-}
-.checked__input {
-  position: absolute;
-  opacity: 0;
-}
-.checked__checked {
-
-}
-.checked__text {
-  font-size: 1.5rem;
-  .xxs( font-size, 1.6rem )
-}
-
-
-
 /* button */
 @back-button-container-image:  linear-gradient(0deg, #2259b3 0%, #4b88ec 100%);
 @back-button-container-position: center;
@@ -44,54 +11,6 @@
 @border-button-container: @border-size-button-container solid @border-color-button-container;
 @border-r-button-container: 4px;
 @box-shadow-button-container: none;
-
-.button__container {
-  background: @back-button-container-image;
-  background-size: @back-size-button-container;
-
-  border-bottom: @border-button-container;
-  border-radius: @border-r-button-container;
-
-  box-shadow: @box-shadow-button-container;
-
-}
-
-/* first screen */
-
-@back-button-check-image: transparent;
-@back-button-check-position: @back-button-container-position;
-@back-button-check: @back-button-check-image @back-button-check-position no-repeat;
-@back-size-button-check: @back-size-button-container;
-
-@border-size-button-check: @border-size-button-container;
-@border-color-button-check: @border-color-button-container;
-@border-button-check: @border-size-button-container @border-color-button-check;
-
-@border-r-button-check: @border-r-button-container;
-@color-button-check: @color-button-container;
-@box-shadow-button-check: @box-shadow-button-container;
-
-.button__check {
-  z-index: 10;
-
-  border: none;
-  /*box-sizing: border-box;
-  border-bottom: @border-button-check;
-  padding-bottom: @border-size-button-container;*/
-
-  border-radius: @border-r-button-container;
-  color: @color-button-check;
-  background: @back-button-check-image;
-
-
-}
-.check__label {
-  background: url("../images/box.png");
-  background-size: 100% 100%;
-}
-
-
-/* second screen */
 
 
 @color-button-buy: @color-button-container;
@@ -107,8 +26,13 @@
 
   text-transform: uppercase;
 
+  background: @back-button-container-image;
+  background-size: @back-size-button-container;
+
+  border-bottom: @border-button-container;
   border-radius: @border-r-button-container;
-  opacity: 0;
+
+  box-shadow: @box-shadow-button-container;
 }
 
 /*@back-button-icon-image: url('../images/button-icon.png');
