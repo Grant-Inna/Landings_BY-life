@@ -21,7 +21,7 @@ mixin index( buttonText, dopTop, icon )
                         span.button__text #{ buttonText }
                         span.button__icon
                     when 'no-icon'
-                        span #{ buttonText }
+                        span.button__text #{ buttonText }
             button.button__cancel( onclick="document.getElementById('frm-cancel').submit(); return false;" ) Отмена
         .footer Подписка на доступ к интернет-ресурсу&nbsp;
             a( href="http://vtrendo.by/" ) http://vtrendo.by/
