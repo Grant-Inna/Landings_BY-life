@@ -1,5 +1,18 @@
 /* top extra block */
 
+.header__extra {
+  margin-top: 10px;
+  height: 100px;
+  position: relative;
+  margin-bottom: -100%;
+
+  display: none;
+
+  .xxs-o( @p, display, block);
+  .xxs-o( @p, height, 120px);
+  .md-o( @l, display, block);
+}
+
 @back-header-relation-image: url('../images/first-screen.png');
 @back-header-relation-position: top;
 @back-header-relation: @back-header-relation-image @back-header-relation-position no-repeat;

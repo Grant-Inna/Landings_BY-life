@@ -80,20 +80,6 @@ gulp.task('CSS5', function() {
 });
 
 
-
-gulp.task('CSS6', function() {
-    return gulp.src( '6/dev/less/style.less' )
-        .pipe(less())
-        .pipe(groupMedia())
-        .pipe(autoprefixer({browsers: ['last 5 versions', '> 2%']}))
-        .pipe(gulp.dest( '6/css/' ))
-        .pipe(cleanCSS())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest( '6/css/' ))
-        .pipe(notify('CSS5 Success!'));
-});
-
-
 gulp.task('jade_1', function() {
     return gulp.src( '1/dev/index.jade' )
         .pipe( jade() )
@@ -119,11 +105,7 @@ gulp.task('jade_5', function() {
         .pipe( jade() )
         .pipe( gulp.dest( '5/' ))
 });
-gulp.task('jade_6', function() {
-    return gulp.src( '6/dev/index.jade' )
-        .pipe( jade() )
-        .pipe( gulp.dest( '6/' ))
-});
+
 
 
 
@@ -177,12 +159,12 @@ gulp.task( 'watch__all', function() {
     gulp.watch([ 'common.less', 'var.less', 'checkbox.less', allSRC ], all);
 });
 
-var all = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6' ];
+var all = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5' ];
 var allSRC = './**/dev/less/*.less';
-var allW = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'watch__common' ];
-var allSrcTask = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'watch__all' ];
+var allW = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'watch__common' ];
+var allSrcTask = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'watch__all' ];
 
-var jadeTask = [ 'jade_1', 'jade_2', 'jade_3', 'jade_4', 'jade_5', 'jade_6' ];
+var jadeTask = [ 'jade_1', 'jade_2', 'jade_3', 'jade_4', 'jade_5' ];
 
 gulp.task( 'default1', allW );
 gulp.task( 'default', allSrcTask );
