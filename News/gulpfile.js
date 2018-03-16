@@ -162,13 +162,11 @@ gulp.task( 'watch__all', function() {
 var all = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5' ];
 var allSRC = './**/dev/less/*.less';
 var allW = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'watch__common' ];
-var allSrcTask2 = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'watch__all' ];
-var allSrcTask = [ 'jade_1', 'jade_2', 'jade_3', 'jade_4', 'jade_5', 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'watch__all' ];
+var allSrcTask = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'watch__all' ];
 
 var jadeTask = [ 'jade_1', 'jade_2', 'jade_3', 'jade_4', 'jade_5' ];
 
 gulp.task( 'default1', allW );
-gulp.task( 'default2', allSrcTask2 );
 gulp.task( 'default', allSrcTask );
 gulp.task( 'jade', jadeTask );
 
