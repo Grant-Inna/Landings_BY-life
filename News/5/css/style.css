@@ -1078,41 +1078,6 @@ a {
   background-size: 85% auto;
 }
 
-.checked {
-  background: url('../images/second-screen.png') center no-repeat;
-  background-size: 80% auto;
-  -webkit-animation: back .6s;
-          animation: back .6s;
-}
-
-@-webkit-keyframes back {
-  0% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes back {
-  0% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-
 /* button */
 
 .button__container {
