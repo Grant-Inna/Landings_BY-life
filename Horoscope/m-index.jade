@@ -15,31 +15,17 @@ mixin index( buttonText, dopTop, icon )
                         .relation
                         #infoScreen.relation__content
         .wrapper__form
-            include text-check
-            .button__container
-                #firstScreen.button__check
-                    label.check__label
-                        input#mainCheckbox.check__input( type="checkbox" )
-                        .check__checked
-                    .check__container
-                        label.check__big( for="mainCheckbox" ) ПОДТВЕРЖДАЮ
-                        a.check__link( href="http://vplayer.ru/uploads/documents/tj-mlt.pdf", target="_blank" )
-                            div своё согласие на подписку
-                button#submitButton.button__buy( onclick="document.getElementById('frm-btn').submit(); return false;" )
-                    case icon
-                        when 'icon'
-                            span.button__text #{ buttonText }
-                            span.button__icon
-                        when 'no-icon'
-                            span #{ buttonText }
-            //button.button__cancel( onclick="document.getElementById('frm-cancel').submit(); return false;" ) Отмена
-        .footer Нажатием кнопки "#{ buttonText }" Вы осуществляете подписку на доступ к интернет-ресурсу&nbsp;
-            a( href="http://vplayer.ru" ) vplayer.ru
-            | &nbsp;и подтверждаете, что ознакомлены и согласны с&nbsp;
-            a( href="http://vplayer.ru/uploads/documents/tj-mlt.pdf", target="_blank" ) условиями подписки
-            | .&nbsp;Стоимость подписки: 0,3 TJS. с НДС за 1 день для абонентов МегаФон Таджикистан.
-            br
-            | Чтобы остановить подписку, отправьте SMS с текстом СТОП 1006 на номер 2420
-    script document.getElementById('mainCheckbox').addEventListener('click', function () { document.getElementById('firstScreen').classList.add('fadeOut'); document.getElementById('submitButton').classList.add('fadeIn'); document.getElementById('checked__textContainer').classList.add('fadeIn'); document.getElementById('infoScreen').classList.add( 'checked' )}); document.getElementById('secondCheckbox').addEventListener('click', function () { if(!document.getElementById('secondCheckbox').checked){ document.getElementById('submitButton').setAttribute( 'disabled', 'disabled' )}else{ document.getElementById('submitButton').removeAttribute( 'disabled', 'disabled' )} });
-
-
+            button.button__buy( onclick="document.getElementById('frm-btn').submit(); return false;" )
+                case icon
+                    when 'icon'
+                        span.button__text #{ buttonText }
+                        span.button__icon
+                    when 'no-icon'
+                        span.button__text #{ buttonText }
+            button.button__cancel( onclick="document.getElementById('frm-cancel').submit(); return false;" ) Отмена
+        .footer Подписка на доступ к интернет-ресурсу&nbsp;
+            a( href="http://vtrendo.by/" ) http://vtrendo.by/
+            | . Стоимость подписки: 0,34р. с НДС за 1 день. Нажатием кнопки «#{ buttonText }» вы осуществляете подписку на доступ к интернет-ресурсу «vtrendo.by» и подтверждаете ознакомление и согласие с&nbsp;
+            a( href="http://vtrendo.by/oferta/oferta_by_life.html", target="_blank" ) условиями его предоставления
+            | . Для отказа от подписки отправьте SMS с текстом «STOP 899»  на номер 1445 (бесплатно в сети life). Все способы отключения смотрите на странице с&nbsp;
+            a( href="http://vtrendo.by/oferta/oferta_by_life.html", target="_blank" ) условиями подписки
