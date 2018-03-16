@@ -992,6 +992,10 @@ a {
   height: 80px;
 }
 
+body {
+  background: #10101a;
+}
+
 .wrapper {
   background: #ffffff url('../images/bg.png') bottom no-repeat;
   background-size: 100% auto;
