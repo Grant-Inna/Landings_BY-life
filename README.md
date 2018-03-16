@@ -1,4 +1,4 @@
-# Landings for TJ Megafon
+# Landings for BY Life
 Repository for testing and demonstrating landings
 
 
