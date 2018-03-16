@@ -1,36 +1,3 @@
-
-.checked__textContainer {
-  background: rgba(243, 243, 243, 0.8);
-  color: #656565;
-}
-
-@back-small-box-image: url('../images/back-small-box.png');
-@back-small-box-position: center;
-@back-small-box: @back-small-box-image @back-small-box-position no-repeat;
-@back-size-small-box: 100% 100%;
-.checked__label {
-  background: @back-small-box;
-  background-size: @back-size-small-box;
-
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  margin-right: 7px;
-}
-.checked__input {
-  position: absolute;
-  opacity: 0;
-}
-.checked__checked {
-
-}
-.checked__text {
-  font-size: 1.5rem;
-  .xxs( font-size, 1.6rem )
-}
-
-
-
 /* button */
 @back-button-container-image: rgb(225, 41, 41);
 @back-button-container-position: center;
@@ -54,46 +21,6 @@
 
 }
 
-/* first screen */
-
-@back-button-check-image: inherit;
-@back-button-check-position: @back-button-container-position;
-@back-button-check: @back-button-check-image @back-button-check-position no-repeat;
-@back-size-button-check: @back-size-button-container;
-
-@border-size-button-check: @border-size-button-container;
-@border-color-button-check: @border-color-button-container;
-@border-button-check: @border-size-button-container @border-color-button-check;
-
-@border-r-button-check: @border-r-button-container;
-@color-button-check: #fff;
-@box-shadow-button-check: @box-shadow-button-container;
-
-.button__check {
-  //background: @back-button-container;
-  background-size: @back-size-button-check;
-  z-index: 10;
-
-  border: none;
-  /*box-sizing: border-box;
-  border-bottom: @border-button-check;
-  padding-bottom: @border-size-button-container;*/
-
-  border-radius: @border-r-button-container;
-  color: @color-button-check;
-
-  //box-shadow: @box-shadow-button-container;
-
-}
-.check__label {
-  background: url("../images/big-box.png");
-  background-size: 100% 100%;
-}
-
-
-/* second screen */
-
-
 @color-button-buy: rgb(255, 255, 255);
 .button__buy {
   .flex;
@@ -103,11 +30,14 @@
   .xs( font-size, 3.7rem );
   color: @color-button-buy;
 
-  border-radius: @border-r-button-container;
-  opacity: 0;
+  background: @back-button-container-image;
+  background-size: @back-size-button-container;
 
-  //background: @back-button-container;
-  //box-shadow: @box-shadow-button-container;
+  border: @border-button-container;
+  border-radius: @border-r-button-container;
+
+  box-shadow: @box-shadow-button-container;
+
 }
 
 @back-button-icon-image: url('../images/button-icon.png');
