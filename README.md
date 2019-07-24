@@ -2,27 +2,27 @@
 Repository for testing and demonstrating landings
 
 
-[**Adult**](https://grant-inna.github.io/Landings_TJ/Adult/)
+[**Adult**](https://grant-inna.github.io/Landings_BY-life/Adult/)
 
-[**Video**](https://grant-inna.github.io/Landings_TJ/Video/) 
+[**Video**](https://grant-inna.github.io/Landings_BY-life/Video/) 
 
-[**General**](https://grant-inna.github.io/Landings_TJ/General/) 
+[**General**](https://grant-inna.github.io/Landings_BY-life/General/) 
 
-[**News**](https://grant-inna.github.io/Landings_TJ/News/) 
+[**News**](https://grant-inna.github.io/Landings_BY-life/News/) 
 
-[**Games**](https://grant-inna.github.io/Landings_TJ/Games/) 
+[**Games**](https://grant-inna.github.io/Landings_BY-life/Games/) 
 
-[**Music**](https://grant-inna.github.io/Landings_TJ/Music/) 
+[**Music**](https://grant-inna.github.io/Landings_BY-life/Music/) 
 
-[**Dating**](https://grant-inna.github.io/Landings_TJ/Dating/) 
+[**Dating**](https://grant-inna.github.io/Landings_BY-life/Dating/) 
 
-[**Horoscope**](https://grant-inna.github.io/Landings_TJ/Horoscope/) 
+[**Horoscope**](https://grant-inna.github.io/Landings_BY-life/Horoscope/) 
 
-[**Host**](https://grant-inna.github.io/Landings_TJ/Host/) 
+[**Host**](https://grant-inna.github.io/Landings_BY-life/Host/) 
 
-[**Sport**](https://grant-inna.github.io/Landings_TJ/Sport/) 
+[**Sport**](https://grant-inna.github.io/Landings_BY-life/Sport/) 
 
-[**Weather**](https://grant-inna.github.io/Landings_TJ/Weather/) 
+[**Weather**](https://grant-inna.github.io/Landings_BY-life/Weather/) 
 
 
 ---
